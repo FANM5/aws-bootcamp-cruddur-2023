@@ -4,10 +4,16 @@
 
 
 ### Recreate Conceptual Diagram in Lucid Charts
-i went ahead and recreated 
+i went ahead and recreated a [Conceptual Diagram](https://lucid.app/lucidchart/5f158124-6718-4caf-a6c9-3aadd143268a/edit?view_items=0ZLxLsx9j5Z0&invitationId=inv_90e5001b-4827-47cc-bff7-551188423713![image](https://user-images.githubusercontent.com/125029884/219743729-d40e769e-fe51-45f4-8914-990f706c2b21.png)
+) using Lucid chart.
+![Conceptual Diagram](Assets/Week%200-%20Conceptual%20Diagram.png)
+
 
 ### Recreate Logical Architectual Diagram in Lucid Charts
 
+[Logical Architectural Diagram](https://lucid.app/lucidchart/5f158124-6718-4caf-a6c9-3aadd143268a/edit?viewport_loc=-479%2C-203%2C2909%2C1423%2C0_0&invitationId=inv_90e5001b-4827-47cc-bff7-551188423713![image](https://user-images.githubusercontent.com/125029884/219745522-0e57b41c-e333-41b4-a007-a5fccbbd27f6.png)
+)
+![Logical Architectural Diagram](Assets/Week%200-%20Logical%20Architectural%20diagram.png)
 ### Create an Admin User
 
 ### Generate AWS Credentials
