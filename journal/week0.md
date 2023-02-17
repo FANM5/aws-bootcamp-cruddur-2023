@@ -4,7 +4,7 @@
 
 
 ### Recreate Conceptual Diagram in Lucid Charts
-
+i went ahead and recreated 
 
 ### Recreate Logical Architectual Diagram in Lucid Charts
 
