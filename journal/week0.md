@@ -20,14 +20,24 @@ i went ahead and recreated a [Conceptual Diagram](https://lucid.app/lucidchart/5
 
 ### Create a Billing Alarm / Budget
 
+![Billing Alarms](Assets/Week%200-%20Billing%20Alarms.png)
 
+![](Assets/Week%200-%20Budget.png)
 
 ## Homework Challenges
 
 ### Use EventBridge to hookup Health Dashboard to SNS and send notification when there is a service health issue
 
 i managed to create a rule on Eventbridge and linked it to a SNS that will trigger and send me an email notifying me of any system's health issue.
+![](Assets/Week%200-%20ServiceHealthNotif%20with%20eventbridge.png)
 
 ### Create an architectural diagram (to the best of your ability) the CI/CD logical pipeline in Lucid Charts
 
-i started building my CI/CD logical pipeline (used an image i saw online) but i ran out free shapes on Lucid so i had to recreate it using draw.io :
+i started building my [CI/CD logical pipeline](https://drive.google.com/file/d/13-CYZuen9fARUGFzYEoninicuRx7iYIk/view?usp=sharing![image](https://user-images.githubusercontent.com/125029884/219821612-67bfc9ea-c671-419c-b73d-87b5270d975a.png)
+) (used an image i saw online) but i ran out free shapes on Lucid so i had to recreate it using draw.io :
+![](Assets/Week%200-%20CI%20CD%20Logical%20Pipeline.png)
+
+### Open a support ticket and request a service limit
+i have also open a ticket with AWS support requesting a service quotas increase for billing alerts and budget.
+![](Assets/Week%200-%20Support%20ticket.png)
+
