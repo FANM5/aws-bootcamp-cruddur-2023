@@ -33,8 +33,8 @@ processor = BatchSpanProcessor(OTLPSpanExporter())
 provider.add_span_processor(processor)
 
 #X-RAY ----------------------------------------------------------------------------------
-#xray_url = os.getenv("AWS_XRAY_URL")
-#xray_recorder.configure(service='backend-flask', dynamic_naming=xray_url)
+xray_url = os.getenv("AWS_XRAY_URL")
+xray_recorder.configure(service='backend-flask', dynamic_naming=xray_url)
 
 #cloudwatch Logs ------------------------------------------------------------------------
 import watchtower
@@ -47,7 +47,7 @@ import rollbar
 import rollbar.contrib.flask
 from flask import got_request_exception
 
-
+#cloudwatch Logs ------------------------------------------------------------------------
 # Configuring Logger to Use CloudWatch
 LOGGER = logging.getLogger(__name__)
 LOGGER.setLevel(logging.DEBUG)
@@ -57,7 +57,7 @@ LOGGER.addHandler(console_handler)
 LOGGER.addHandler(cw_handler)
 LOGGER.info("test log")
 
-
+# OTEL ---------------------------------------------------------------------
 # Show this in the logs within the backend-flask app (STDOUT)
 simple_processor = SimpleSpanProcessor(ConsoleSpanExporter())
 provider.add_span_processor(simple_processor)
@@ -68,7 +68,7 @@ tracer = trace.get_tracer(__name__)
 app = Flask(__name__)
 
 #X-RAY ----------------------------------------------------------------------------------
-#XRayMiddleware(app, xray_recorder)
+XRayMiddleware(app, xray_recorder)
 
 #Rollbar --------------------------------------------------------------------------------
 rollbar_access_token = os.getenv('ROLLBAR_ACCESS_TOKEN')
@@ -113,12 +113,16 @@ def data_message_groups():
     return model['errors'], 422
   else:
     return model['data'], 200
-    
+
+# Cloudwatch ------------------------------------------------------------- 
+   
 @app.after_request
 def after_request(response):
     timestamp = strftime('[%Y-%b-%d %H:%M]')
     LOGGER.error('%s %s %s %s %s %s', timestamp, request.remote_addr, request.method, request.scheme, request.full_path, response.status)
     return response
+
+#Rollbar ----------------------------------------------------------------
 
 @app.route('/rollbar/test')
 def rollbar_test():
