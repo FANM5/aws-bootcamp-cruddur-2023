@@ -61,7 +61,7 @@ tracer = trace.get_tracer(__name__)
 app = Flask(__name__)
 
 #X-RAY ----------------------------------------------------------------------------------
-XRayMiddleware(app, xray_recorder)
+#XRayMiddleware(app, xray_recorder)
 
 # HoneyComb -----------------------------------------------------------------------------
 # Initialize automatic instrumentation with Flask
@@ -89,11 +89,11 @@ def data_message_groups():
   else:
     return model['data'], 200
     
-@app.after_request
-def after_request(response):
-    timestamp = strftime('[%Y-%b-%d %H:%M]')
-    LOGGER.error('%s %s %s %s %s %s', timestamp, request.remote_addr, request.method, request.scheme, request.full_path, response.status)
-    return response
+#@app.after_request
+#def after_request(response):
+    #timestamp = strftime('[%Y-%b-%d %H:%M]')
+    #LOGGER.error('%s %s %s %s %s %s', timestamp, request.remote_addr, request.method, request.scheme, request.full_path, response.status)
+    #return response
 
 @app.route("/api/messages/@<string:handle>", methods=['GET'])
 def data_messages(handle):
